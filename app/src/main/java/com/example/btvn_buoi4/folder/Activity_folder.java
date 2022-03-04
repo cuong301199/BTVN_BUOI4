@@ -23,6 +23,7 @@ public class Activity_folder extends AppCompatActivity {
     private List<FolderModel> folderModelList;
     private int index = 1;
     FolderAdapter adapter;
+    LinearLayoutManager linearLayoutManager;
 
 
 
@@ -33,7 +34,7 @@ public class Activity_folder extends AppCompatActivity {
         setContentView(R.layout.activity_folder);
 
         rcv_holder = findViewById(R.id.rcv_folder);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplication(),RecyclerView.VERTICAL,false);
+        linearLayoutManager = new LinearLayoutManager(getApplication(),RecyclerView.VERTICAL,false);
         adapter = new FolderAdapter(setListFolder());
 
         rcv_holder.setLayoutManager(linearLayoutManager);
@@ -65,6 +66,7 @@ public class Activity_folder extends AppCompatActivity {
                     case R.id.add_menu:
                     folderModelList.add(new FolderModel("Folder" + index));
                     adapter.notifyDataSetChanged();
+                    linearLayoutManager.scrollToPosition(folderModelList.size()-1);
                     index++;
                 }
                 return true;
