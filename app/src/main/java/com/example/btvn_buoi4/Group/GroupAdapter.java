@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,10 +18,10 @@ import java.util.List;
 
 public class GroupAdapter extends RecyclerView.Adapter {
 
-    List<Group>  groupList;
+    List<GroupModel> groupModelList;
 
-    public GroupAdapter(List<Group> groupList) {
-        this.groupList = groupList;
+    public GroupAdapter(List<GroupModel> groupModelList) {
+        this.groupModelList = groupModelList;
     }
 
     @NonNull
@@ -34,26 +33,26 @@ public class GroupAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        Group group = groupList.get(position);
+        GroupModel groupModel = groupModelList.get(position);
 
-        ((GroupViewHolder) holder).img_group.setImageResource(group.getImgResource());
-        ((GroupViewHolder) holder).tv_name.setText(group.getNameGroup());
-        ((GroupViewHolder) holder).tv_qty_folow.setText(String.valueOf(group.getQtyFolower())+"K"+" Fan");
-        ((GroupViewHolder) holder).tv_qty_post.setText("+" + String.valueOf(group.getQtyPost())+" bài viết mới nhất");
+        ((GroupViewHolder) holder).img_group.setImageResource(groupModel.getImgResource());
+        ((GroupViewHolder) holder).tv_name.setText(groupModel.getNameGroup());
+        ((GroupViewHolder) holder).tv_qty_folow.setText(String.valueOf(groupModel.getQtyFolower())+"K"+" Fan");
+        ((GroupViewHolder) holder).tv_qty_post.setText("+" + String.valueOf(groupModel.getQtyPost())+" bài viết mới nhất");
 
         //        status = 1 => nhóm đóng
         //        status = 2 => nhóm kín
         //        status = 3 => nhóm mở
 
-        switch (group.getStatus()){
-            case 1:
+        switch (groupModel.getStatus()){
+            case NHOM_DONG:
                 ((GroupViewHolder) holder).tv_status.setText("Nhóm đóng");
                 break;
-            case 2:
+            case NHOM_KIN:
                 ((GroupViewHolder) holder).tv_status.setText("Nhóm kín");
                 ((GroupViewHolder) holder).tv_status.setTextColor(Color.parseColor("#FFD85A29"));
                 break;
-            case 3:
+            case NHOM_MO:
                 ((GroupViewHolder) holder).tv_status.setText("Nhóm mở");
                 ((GroupViewHolder) holder).tv_status.setTextColor(Color.parseColor("#336AD8"));
                 break;
@@ -63,7 +62,7 @@ public class GroupAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return groupList.size();
+        return groupModelList.size();
     }
 
     public class GroupViewHolder extends RecyclerView.ViewHolder{

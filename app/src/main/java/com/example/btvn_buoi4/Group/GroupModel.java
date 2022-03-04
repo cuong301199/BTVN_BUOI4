@@ -1,18 +1,22 @@
 package com.example.btvn_buoi4.Group;
 
-public class Group {
+public class GroupModel {
     private int imgResource;
     private String nameGroup;
     private int qtyFolower;
     private int qtyPost;
-    private int status;
+    private STATUS_POST status;
 
-    public Group(int imgResource, String nameGroup, int qtyFolower, int qtyPost, int status) {
+    public GroupModel(int imgResource, String nameGroup, int qtyFolower, int qtyPost, STATUS_POST status) {
         this.imgResource = imgResource;
         this.nameGroup = nameGroup;
         this.qtyFolower = qtyFolower;
         this.qtyPost = qtyPost;
         this.status = status;
+    }
+
+    enum STATUS_POST{
+        NHOM_DONG,NHOM_KIN,NHOM_MO;
     }
 
 
@@ -48,11 +52,11 @@ public class Group {
         this.qtyPost = qtyPost;
     }
 
-    public int getStatus() {
+    public STATUS_POST getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(STATUS_POST status) {
         this.status = status;
     }
 }

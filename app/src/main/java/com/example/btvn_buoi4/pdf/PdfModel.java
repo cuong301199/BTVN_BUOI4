@@ -1,9 +1,9 @@
 package com.example.btvn_buoi4.pdf;
 
-public class Pdf {
+public class PdfModel {
     private String name;
 
-    public Pdf(String name) {
+    public PdfModel(String name) {
         this.name = name;
     }
 

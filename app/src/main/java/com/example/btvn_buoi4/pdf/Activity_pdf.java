@@ -7,21 +7,28 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.btvn_buoi4.R;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Activity_pdf extends AppCompatActivity {
     private RecyclerView rcv_pdf;
-
+    private TextView tv_add_item;
+    private  List<PdfModel> pdfModelList;
+    private int index;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf);
         rcv_pdf = findViewById(R.id.rcv_pdf);
+        tv_add_item = findViewById(R.id.tv_add_item);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplication(),RecyclerView.VERTICAL, false);
         PdfAdapter adapter = new PdfAdapter(setListPdf());
@@ -29,6 +36,16 @@ public class Activity_pdf extends AppCompatActivity {
         rcv_pdf.setAdapter(adapter);
 
         setToolbar();
+
+        tv_add_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pdfModelList.add(new PdfModel("PDF "+ index));
+                adapter.notifyDataSetChanged();
+                linearLayoutManager.scrollToPosition(pdfModelList.size()-1);
+                index++;
+            }
+        });
 
     }
 
@@ -52,15 +69,14 @@ public class Activity_pdf extends AppCompatActivity {
 
         getWindow().setStatusBarColor(getColor(R.color.color_status_bar));
     }
+    private List<PdfModel> setListPdf() {
+        pdfModelList = new ArrayList<>();
 
-    private List<Pdf> setListPdf() {
-        List<Pdf> pdfList = new ArrayList<>();
-
-        pdfList.add(new Pdf("To skill a Mockingbird"));
-        pdfList.add(new Pdf("To skill a Mockingbird"));
-        pdfList.add(new Pdf("To skill a Mockingbird"));
-        pdfList.add(new Pdf("To skill a Mockingbird"));
-        pdfList.add(new Pdf("To skill a Mockingbird"));
-        return pdfList;
+        pdfModelList.add(new PdfModel("To skill a Mockingbird"));
+        pdfModelList.add(new PdfModel("To skill a Mockingbird"));
+        pdfModelList.add(new PdfModel("To skill a Mockingbird"));
+        pdfModelList.add(new PdfModel("To skill a Mockingbird"));
+        pdfModelList.add(new PdfModel("To skill a Mockingbird"));
+        return pdfModelList;
     }
 }

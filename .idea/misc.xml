@@ -4,13 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/drawable/bg_corner_image_group.xml" value="0.1" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/drawable/bg_text_add_item_pdf.xml" value="0.205" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/drawable/ic_vector.xml" value="0.1835" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/drawable/icon_back.xml" value="0.1" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/drawable/icon_square1.xml" value="0.2285" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/activity_folder.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/activity_group.xml" value="0.14719202898550723" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/activity_pdf.xml" value="0.176" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/activity_pdf.xml" value="0.1" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/dialog_edit_layout.xml" value="0.18432971014492755" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/folder_layout_item.xml" value="0.2" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/group_layout_item.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/pdf_layout_item.xml" value="0.136" />
+        <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/layout/pdf_layout_item.xml" value="0.176" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/menu/menu_item_folder.xml" value="0.1" />
         <entry key="..\:/Users/PC/AndroidStudioProjects/BTVN/BTVN_BUOI4/app/src/main/res/menu/menu_item_pdf.xml" value="0.1648148148148148" />
       </map>

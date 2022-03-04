@@ -1,9 +1,9 @@
 package com.example.btvn_buoi4.folder;
 
-public class Folder {
+public class FolderModel {
     private String name;
 
-    public Folder(String name) {
+    public FolderModel(String name) {
 
         this.name = name;
     }

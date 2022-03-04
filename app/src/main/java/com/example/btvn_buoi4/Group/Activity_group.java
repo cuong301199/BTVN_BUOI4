@@ -46,20 +46,20 @@ public class Activity_group extends AppCompatActivity {
 
     }
 
-    private List<Group> setList() {
-        List<Group> groupList = new ArrayList<>();
+    private List<GroupModel> setList() {
+        List<GroupModel> groupModelList = new ArrayList<>();
         //        status = 1 => nhóm đóng
         //        status = 2 => nhóm kín
         //        status = 3 => nhóm mở
-        groupList.add(new Group(R.drawable.martphone,"Mua bán có tâm",8,10,1));
-        groupList.add(new Group(R.drawable.eat_clean,"Ăn để lăn", 11,10,2));
-        groupList.add(new Group(R.drawable.baby,"Chia sẽ kiến thức tài liệu Montessori",8,10,3));
-        groupList.add(new Group(R.drawable.eat_clean_2,"Thực đơn Eat-Clean giảm cân khỏe đẹp",8,10,3));
-        groupList.add(new Group(R.drawable.kento,"Easy kento for busy People",8,8,2));
-        groupList.add(new Group(R.drawable.car,"OFBB",8,10,3));
-        groupList.add(new Group(R.drawable.eat_clean_2,"Thực đơn Eat-Clean giảm cân khỏe đẹp",11,10,3));
-        groupList.add(new Group(R.drawable.kento,"Easy kento for busy People",8,10,2));
+        groupModelList.add(new GroupModel(R.drawable.martphone,"Mua bán có tâm",8,10, GroupModel.STATUS_POST.NHOM_DONG));
+        groupModelList.add(new GroupModel(R.drawable.eat_clean,"Ăn để lăn", 11,10, GroupModel.STATUS_POST.NHOM_KIN));
+        groupModelList.add(new GroupModel(R.drawable.baby,"Chia sẽ kiến thức tài liệu Montessori",8,10, GroupModel.STATUS_POST.NHOM_MO));
+        groupModelList.add(new GroupModel(R.drawable.eat_clean_2,"Thực đơn Eat-Clean giảm cân khỏe đẹp",8,10, GroupModel.STATUS_POST.NHOM_MO));
+        groupModelList.add(new GroupModel(R.drawable.kento,"Easy kento for busy People",8,8,GroupModel.STATUS_POST.NHOM_KIN));
+        groupModelList.add(new GroupModel(R.drawable.car,"OFBB",8,10, GroupModel.STATUS_POST.NHOM_MO));
+        groupModelList.add(new GroupModel(R.drawable.eat_clean_2,"Thực đơn Eat-Clean giảm cân khỏe đẹp",11,10, GroupModel.STATUS_POST.NHOM_MO));
+        groupModelList.add(new GroupModel(R.drawable.kento,"Easy kento for busy People",8,10,GroupModel.STATUS_POST.NHOM_KIN));
 
-        return groupList;
+        return groupModelList;
     }
 }
